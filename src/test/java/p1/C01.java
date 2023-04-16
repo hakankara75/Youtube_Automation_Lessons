@@ -2,14 +2,16 @@ package p1;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import utilities.TestBase;
 
-import static utilities.TestBase.driver;
 
-public class C01 {
-    @Test
-    public void test() throws InterruptedException {
+public class C01 extends TestBase {
+ @Test
+         public void test(){
 //        2. Navigate to url 'http://automationexercise.com'
-        driver.get("http://automationexercise.com");
+
+     driver.get("http://automationexercise.com");
 
         //alttan açılıp kapanan reklamı kapatmak icin shadow root (closed)
 

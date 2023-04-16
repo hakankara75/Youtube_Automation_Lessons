@@ -15,11 +15,12 @@ import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
 public abstract class TestBase {
     //TestBase class'indan obje olusturmanin onune gecilmesi icin abstract yapilabilir
 //Orn: TestBase base=new TestBase();
 //Bu class'a extend ettigimiz test classlarinda ulasabiliriz.
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
     @Before
     public void setUp() throws Exception {
@@ -103,4 +104,5 @@ public abstract class TestBase {
         actions.scrollToElement(bottom).perform();
         //bu kod locati alinan elemana kadar sayfayi asagi goturur
     }
+
 }
