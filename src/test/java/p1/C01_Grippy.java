@@ -2,11 +2,10 @@ package p1;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import utilities.TestBase;
 
 
-public class C01 extends TestBase {
+public class C01_Grippy extends TestBase {
  @Test
          public void test(){
 //        2. Navigate to url 'http://automationexercise.com'
