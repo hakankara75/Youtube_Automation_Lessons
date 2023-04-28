@@ -35,8 +35,8 @@ public class C03_Trendyol_Uyelik_Bilgileri_Girisi_Select extends TestBase {
         extentTest.info("menunun acildigi dogrulandi");
 
         //uyelik bilgilerini gir
-        driver.findElement(By.xpath("//input[@id='login-email']")).sendKeys("hakanbatirhan@gmail.com");
-        webElementSendKeys("//input[@id='login-password-input']", ",bbbbbbb");
+        driver.findElement(By.xpath("//input[@id='login-email']")).sendKeys("ffffffff@gmail.com");
+        webElementSendKeys("//input[@id='login-password-input']", "bbbbbbb");
         threadSleep(3);
         findByXpathClick("//button[@class='q-primary q-fluid q-button-medium q-button submit']");
         extentTest.info("Uyelik bilgileri girildi");
