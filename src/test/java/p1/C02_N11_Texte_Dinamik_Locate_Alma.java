@@ -12,7 +12,9 @@ public class C02_N11_Texte_Dinamik_Locate_Alma  extends TestBase {
         driver.get("https://www.n11.com");
         WebElement aramaKutusu= driver.findElement(By.xpath("//input[@id='searchData']"));
         aramaKutusu.sendKeys("Fındık Kreması", Keys.ENTER);
-        int sonuc= driver.findElement()
+        int sonuc= Integer.parseInt(driver.findElement(By.xpath("(//strong[text()=.])[2]")).getText());
+        System.out.println(sonuc);
+
 
 
     }
