@@ -2,6 +2,7 @@ package p1;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,9 +11,12 @@ import com.github.javafaker.Faker;
 
 
 
-public class C03_Trendyol_Uyelik_Bilgileri_Girisi_Select extends TestBase {
+public class C04_Trendyol_Uyelik_Bilgileri_Girisi_Select extends TestBase {
     @Test
     public void name() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
         extentTest = extentReports.createTest("ExtentTest", "Trendyol Uyelik Test Raporu");
         //   "https://www.trendyol.com/" sitesine git
         driver.get("https://www.trendyol.com/");
