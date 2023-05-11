@@ -65,8 +65,8 @@ public class C05_JavaScript_Locate extends TestBase {
         js.executeScript("arguments[0].click();", proplan);
 
         //Proplan marka mamayi secildigini dogrula
-//        Boolean isChecked = (Boolean) js.executeScript("return arguments[0].checked;", proplan);
-//        assertTrue(isChecked);
+        Boolean isChecked = (Boolean) js.executeScript("return arguments[0].checked;", proplan);
+        assertTrue(isChecked);
 
         //en alt menude vivense markasina git
         WebElement element = (WebElement) js.executeScript("return document.querySelector(\"#popular-brand-category-container > div > div > div.popularBrands__wrapper__brands > ul > li:nth-child(3) > a\")");
