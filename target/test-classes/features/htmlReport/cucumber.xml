@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="13.582" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Gherkin Language Degistirme" name="TC01 kullanici Amazonda Nutella aratir" time="13.401">
+<system-out><![CDATA[
+Diyelim ki kullanici Amazon sayfasinda......................................passed
+O zaman kullanici Nutella icin arama yapar..................................passed
+Ve sonuclarin Nutella icerdigini test eder..................................passed
+Ve Amazon'un Secimi yazan urunu tiklar......................................passed
+Ve sayfayi kapatir..........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

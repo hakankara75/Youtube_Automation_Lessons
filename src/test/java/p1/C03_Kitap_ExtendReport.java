@@ -49,7 +49,6 @@ public class C03_Kitap_ExtendReport {
 
         //akilli siralama dropdown tikla
         n11Kitap.akilliSiralama.click();
-        ReusableMethods.bekle(2);
         ReusableMethods.extentTestInfo("akilli siralama dropdown tiklandi");
 
         //satis miktarini sec
