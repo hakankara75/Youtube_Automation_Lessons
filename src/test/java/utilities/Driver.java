@@ -50,6 +50,15 @@ public class Driver {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
                     break;
+                case "chrome-headless":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    //bu secenekte chrome acilmadan test kosulur
+                    break;
+                default:
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+
 
             }
 
