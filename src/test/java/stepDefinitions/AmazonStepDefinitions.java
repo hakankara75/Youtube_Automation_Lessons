@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.cucumber.java.tr.Ve;
 import org.openqa.selenium.Keys;
 import pages.AmazonPage;
@@ -11,7 +12,6 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
-import static utilities.ReusableMethods.bekle;
 
 public class AmazonStepDefinitions {
     AmazonPage amazonPage = new AmazonPage();
@@ -35,6 +35,25 @@ public class AmazonStepDefinitions {
     public void sayfayi_kapatir() {
 
         Driver.closeDriver();
+    }
+
+    @Then("kullanici Java icin arama yapar")
+    public void kullanici_java_icin_arama_yapar() {
+        amazonPage.aramaKutusu.sendKeys("Java", Keys.ENTER);
+    }
+    @Then("sonuclarin Java icerdigini test eder")
+    public void sonuclarin_java_icerdigini_test_eder() {
+        assertTrue(amazonPage.sonucYazisi.getText().contains("Java"));
+    }
+
+    @Then("kullanici iphone icin arama yapar")
+    public void kullaniciIphoneIcinAramaYapar() {
+        amazonPage.aramaKutusu.sendKeys("iphone", Keys.ENTER);
+    }
+
+    @And("sonuclarin iphone icerdigini test eder")
+    public void sonuclarinIphoneIcerdiginiTestEder() {
+        assertTrue(amazonPage.sonucYazisi.getText().contains("iphone"));
     }
 
     @Then("kullanici {string} icin arama yapar")
@@ -92,8 +111,18 @@ public class AmazonStepDefinitions {
 
 
     @Ve("Amazon'un Secimi yazan urunu tiklar")
-    public void amazonUnSecimiYazanUrunuTiklar() throws InterruptedException {
+    public void amazonUnSecimiYazanUrunuTiklar() {
         amazonPage.amazonunSecimi.click();
-        bekle(3);
+        ReusableMethods.bekle(3);
+    }
+
+    @When("kullanici Başa dön yazisina kadar iner")
+    public void kullaniciBasaDonYazisinaKadarIner() {
+        ReusableMethods.scrollToElementWithWebElement(amazonPage.backToTop);
+    }
+
+    @Then("Başa dön yazisina geldigini dogrular")
+    public void basaDonYazisinaGeldiginiDogrular() {
+        assertTrue(amazonPage.backToTop.isDisplayed());
     }
 }

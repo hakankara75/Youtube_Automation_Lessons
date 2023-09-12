@@ -36,4 +36,6 @@ public class AmazonPage {
     public WebElement image5;
     @FindBy (xpath = "//span[text()='Amazon’un ']")
     public WebElement amazonunSecimi;
+    @FindBy (xpath = "//span[normalize-space()='Başa dön']")
+    public WebElement backToTop;
 }
