@@ -1,17 +1,16 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import io.cucumber.java.tr.Ve;
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
 import static org.junit.Assert.assertTrue;
+
 
 public class AmazonStepDefinitions {
     AmazonPage amazonPage = new AmazonPage();
@@ -19,11 +18,16 @@ public class AmazonStepDefinitions {
     @Given("kullanici Amazon sayfasinda")
     public void kullanici_amazon_sayfasinda() {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+        amazonPage.cerez.click();
     }
 
     @Then("kullanici Nutella icin arama yapar")
     public void kullanici_nutella_icin_arama_yapar() {
-        amazonPage.aramaKutusu.sendKeys("Nutella", Keys.ENTER);
+        amazonPage.aramaKutusu.sendKeys("Nutella");
+        Actions act = new Actions(Driver.getDriver());
+        WebElement elementLocator = Driver.getDriver().findElement(By.id("nav-search-submit-button"));
+        ReusableMethods.flash(elementLocator, Driver.getDriver());
+        elementLocator.click();
     }
 
     @Then("sonuclarin Nutella icerdigini test eder")
@@ -110,10 +114,10 @@ public class AmazonStepDefinitions {
     }
 
 
-    @Ve("Amazon'un Secimi yazan urunu tiklar")
+    @And("Amazon'un Secimi yazan urunu tiklar")
     public void amazonUnSecimiYazanUrunuTiklar() {
         amazonPage.amazonunSecimi.click();
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(300);
     }
 
     @When("kullanici Başa dön yazisina kadar iner")

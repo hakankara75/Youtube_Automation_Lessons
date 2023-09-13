@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="21.69" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Gherkin Language Degistirme" name="TC01 kullanici Amazonda Nutella aratir" time="21.177">
+<testsuite name="Cucumber" time="10.73" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US01 Cok satan edebiyat kitapları" name="TC01 cok satan edebiyat kitaplari sayfasi testi" time="10.336">
+<failure/>
 <system-out><![CDATA[
-Diyelim ki kullanici Amazon sayfasinda......................................passed
-O zaman kullanici Nutella icin arama yapar..................................passed
-Ve sonuclarin Nutella icerdigini test eder..................................passed
-Ve Amazon'un Secimi yazan urunu tiklar......................................passed
-Ve sayfayi kapatir..........................................................passed
+Given Kullanici "kitapYurduUrl" e gider.....................................passed
+When kullanici cok satan kitaplar menusu ustune gelir.......................passed
+And 3 saniye bekleme yapar..................................................undefined
+And cok satan edebiyat kitaplari linkini tiklar.............................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
