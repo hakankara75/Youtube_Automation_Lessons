@@ -1,1 +1,0 @@
-file:src/test/resources/features/clickHighlight_02'.feature:4

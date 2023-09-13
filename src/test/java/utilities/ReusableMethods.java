@@ -578,17 +578,33 @@ return element;
         }
         return saniye;
     }
+
+    /**
+     * Click yapilacak elementi belli etmek icin arka plan rengini degistirip yanip yanip sondururerek yerini belli eder.
+     * Burada amac tiklama islemini belirgin hale getirmek.
+     * @param element click yapilacak element
+     * @param driver
+     */
     public static void flash(WebElement element,WebDriver driver){
         JavascriptExecutor js= (JavascriptExecutor) driver;
-        String elementColor=element.getCssValue("backgroundColor");
+        String elementColor=element.getCssValue("backgroundColor"); //locate alinan yerin  arka plan rengini alir
         for (int i = 0; i < 10; i++) {
-            changeColor("rgb(0,10000,0)", element, driver);
+            changeColor("rgb(0,0,0)", element, driver); //elemente siyah renk verir rgb kizmi rengi belirtir
+            //changeColor("rgb(255,0,0)", element, driver); //kirmizi renk
+            //changeColor("rgb(0,255,0)", element, driver); //yesil renk
             changeColor(elementColor, element, driver);
         }
     }
+
+    /**
+     * flash metoduna renk degistirme islemini yaptirir. Elementin arka plan renginin parametre olarak atanacagini bildirir.
+     * @param color arka plan rengi
+     * @param element   arka plan rengi degisecek element
+     * @param driver
+     */
     public static void changeColor(String color, WebElement element, WebDriver driver){
-        JavascriptExecutor js= (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element);
+        JavascriptExecutor js= (JavascriptExecutor) driver; //javascript kodlarini calistirir
+        js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element); //elementin renginin degismesini sağlar
 
         try{
             Thread.sleep(20);

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.73" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US01 Cok satan edebiyat kitapları" name="TC01 cok satan edebiyat kitaplari sayfasi testi" time="10.336">
-<failure/>
+<testsuite name="Cucumber" time="14.135" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="13.679">
 <system-out><![CDATA[
-Given Kullanici "kitapYurduUrl" e gider.....................................passed
-When kullanici cok satan kitaplar menusu ustune gelir.......................passed
-And 3 saniye bekleme yapar..................................................undefined
-And cok satan edebiyat kitaplari linkini tiklar.............................skipped
+Given kullanici Amazon sayfasinda...........................................passed
+Then kullanici Nutella icin arama yapar.....................................passed
+And sonuclarin Nutella icerdigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
