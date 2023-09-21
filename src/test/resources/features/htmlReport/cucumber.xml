@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.135" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="13.679">
+<testsuite name="Cucumber" time="26.795" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="26.524">
 <system-out><![CDATA[
 Given kullanici Amazon sayfasinda...........................................passed
-Then kullanici Nutella icin arama yapar.....................................passed
-And sonuclarin Nutella icerdigini test eder.................................passed
+Then kullanici Sarı Mum icin arama yapar....................................passed
+And sonuclarin Sarı Mum icerdigini test eder................................passed
+And bir urun secer..........................................................passed
 And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>

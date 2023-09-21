@@ -12,6 +12,8 @@ public class AmazonPage {
     }
     @FindBy (id = "twotabsearchtextbox")
     public WebElement aramaKutusu;
+    @FindBy (id = "nav-search-submit-button")
+    public WebElement aramaButonu;
     @FindBy (id = "sp-cc-accept")
     public WebElement cerez;
     @FindBy (xpath = "//div[@class='sg-col-14-of-20 sg-col-18-of-24 sg-col s-breadcrumb sg-col-10-of-16 sg-col-6-of-12']")
@@ -28,8 +30,8 @@ public class AmazonPage {
     public WebElement signInSubmit;
     @FindBy (xpath = "//*[@class='a-link-normal']//following::img[1]")
     public WebElement image;
-    @FindBy (xpath = "//*[@class='a-link-normal']//following::img[2]")
-    public WebElement image2;
+    @FindBy (xpath = "(//span[@class='a-size-base-plus a-color-base a-text-normal'])[1]")
+    public WebElement ilkMumUrunu;
     @FindBy (xpath = "//*[@class='a-link-normal']//following::img[3]")
     public WebElement image3;
     @FindBy (xpath = "//*[@class='a-link-normal']//following::img[4]")

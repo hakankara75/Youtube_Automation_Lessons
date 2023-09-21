@@ -129,4 +129,33 @@ public class AmazonStepDefinitions {
     public void basaDonYazisinaGeldiginiDogrular() {
         assertTrue(amazonPage.backToTop.isDisplayed());
     }
+
+    @Then("kullanici Sarı Mum icin arama yapar")
+    public void kullaniciSarıMumIcinAramaYapar() {
+        ReusableMethods.showElementWithFrame("input[id='twotabsearchtextbox']");
+        ReusableMethods.bekle(2);
+        amazonPage.aramaKutusu.sendKeys("Sarı Mum");
+        ReusableMethods.bekle(2);
+        ReusableMethods.showElementWithFrame("#nav-search-submit-button");
+        ReusableMethods.bekle(2);
+        amazonPage.aramaButonu.click();
+
+    }
+
+    @And("sonuclarin Sarı Mum icerdigini test eder")
+    public void sonuclarinSarıMumIcerdiginiTestEder() {
+        ReusableMethods.showElementWithFrame("span[class='a-color-state a-text-bold']");
+        ReusableMethods.bekle(2);
+        assertTrue(amazonPage.sonucYazisi.getText().contains("Sarı Mum"));
+        ReusableMethods.bekle(2);
+    }
+
+    @And("bir urun secer")
+    public void birUrunSecer() {
+        ReusableMethods.showElementWithFrame("div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_5'] div[class='a-section a-spacing-none a-spacing-top-small s-title-instructions-style'] span:nth-child(1)");
+        ReusableMethods.bekle(2);
+        amazonPage.ilkMumUrunu.click();
+    }
+
+
 }

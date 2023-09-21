@@ -14,6 +14,9 @@ import org.testng.Assert;
 import org.testng.AssertJUnit;
 import pages.N11_Login;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -611,5 +614,53 @@ return element;
         }catch (Exception e){
 
         }
+    }
+
+    /**
+     * Bu metot ile bir dosyayi bilgisayardan secerek yukleme yapilir. Metot dosya yukleme
+     * isteyen bir pencere acildiginda kullanilabilir
+     * @param filePath bilgisayardan yuklenecek dosya yolu
+     */
+    public static void robotClassDosyaYukleme(String filePath){
+        try{
+            ReusableMethods.bekle(3);
+            StringSelection stringSelection = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+            Robot robot = new Robot();
+            //pressing ctrl+v
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+            robot.keyPress(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            //releasing ctrl+v
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+            robot.keyRelease(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            System.out.println("PASSED");
+            //pressing enter
+            ReusableMethods.bekle(3);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            //releasing enter
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            System.out.println("ENTER");
+        }catch (Exception e){
+        }
+    }
+
+    /** Bu metot islem yapilacak elementin etrafina renkli cerceve cizerek belirgin hale getirir.
+     *
+     * @param locate islem yapilacak elementin cssSelector turunden locate string olarak girilmeli
+     */
+    public static void showElementWithFrame(String locate){
+        WebElement element = Driver.getDriver().findElement(By.cssSelector(""+locate+""));
+        String script = "arguments[0].style.border='3px solid red';";
+//        String script = "arguments[0].style.border='3px solid white';";
+//        String script = "arguments[0].style.border='3px solid yellow';";
+//        String script = "arguments[0].style.border='3px solid green';";
+        ((JavascriptExecutor) Driver.getDriver()).executeScript(script, element);
+
     }
 }
