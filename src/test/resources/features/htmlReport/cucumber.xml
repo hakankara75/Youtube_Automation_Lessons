@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="26.795" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="26.524">
+<testsuite name="Cucumber" time="23.519" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="23.043">
+<failure type="org.openqa.selenium.NoSuchElementException" message="Unable to find element with locator By.xpath: //div[@class='sg-col-14-of-20 sg-col-18-of-24 sg-col s-breadcrumb sg-col-10-of-16 sg-col-6-of-12']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: RemoteWebDriver">
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[@class='sg-col-14-of-20 sg-col-18-of-24 sg-col s-breadcrumb sg-col-10-of-16 sg-col-6-of-12']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.getText(Unknown Source)
+	at stepDefinitions.AmazonStepDefinitions.sonuclarin_nutella_icerdigini_test_eder(AmazonStepDefinitions.java:35)
+	at ✽.sonuclarin Nutella icerdigini test eder(file:///C:/Users/Hakan%20Batirhan.DESKTOP-KA8SOKR/IdeaProjects/Youtube_Automation_Lessons/src/test/resources/features/clickHighlight.feature:6)
+]]>
+</failure>
 <system-out><![CDATA[
 Given kullanici Amazon sayfasinda...........................................passed
-Then kullanici Sarı Mum icin arama yapar....................................passed
-And sonuclarin Sarı Mum icerdigini test eder................................passed
-And bir urun secer..........................................................passed
-And sayfayi kapatir.........................................................passed
+Then kullanici Nutella icin arama yapar.....................................passed
+And sonuclarin Nutella icerdigini test eder.................................failed
+And sayfayi kapatir.........................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
