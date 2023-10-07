@@ -15,10 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 
-        <configuration>
-            <forkCount>1</forkCount>
-            <reuseForks>true</reuseForks>
-        </configuration>
+
     </properties>
     <dependencies>
 
@@ -28,7 +25,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.12.1</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
