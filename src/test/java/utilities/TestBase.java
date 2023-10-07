@@ -2,7 +2,7 @@ package utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
@@ -32,6 +32,10 @@ import static org.junit.Assert.assertTrue;
 
 public abstract class TestBase {
 
+
+    protected static WebDriver driver;
+    protected static ExtentReports extentReports;
+    protected static ExtentTest extentTest;
     @Before
     public void setUp() throws Exception {
         driver = new ChromeDriver();
@@ -43,13 +47,15 @@ public abstract class TestBase {
         extentReports = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+        ExtentSparkReporter extentHtmlReporter = new ExtentSparkReporter("TestOutput/reports/extentReport.html");
+        ExtentReports extentReports = new ExtentReports();
         extentReports.attachReporter(extentHtmlReporter);
-        //Raporda gözükmesini istediğimiz bilgiler için
+
+        // Rapor bilgileri
         extentReports.setSystemInfo("Browser", "Chrome");
         extentReports.setSystemInfo("Tester", "Hakan");
-        extentHtmlReporter.config().setDocumentTitle("Extent Report");
-        extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+
+        // ExtentTest nesnesi oluştur
         extentTest = extentReports.createTest("ExtentTest", "Test Raporu");
 
     }
@@ -238,9 +244,5 @@ public abstract class TestBase {
 
     }
 
-    protected static WebDriver driver;
-    protected static ExtentReports extentReports;
-    protected static ExtentHtmlReporter extentHtmlReporter;
-    protected static ExtentTest extentTest;
 }
 
