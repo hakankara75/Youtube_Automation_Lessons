@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.959" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1001 Kullanici Amazon Sayfadsinda Arama yapar" name="TC01 kullanici Amazonda Nutella aratir" time="7.444">
-<failure type="org.openqa.selenium.NoSuchElementException" message="Unable to find element with locator By.id: sp-cc-accept
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: driver.version: RemoteWebDriver">
-<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: sp-cc-accept
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
-	at stepDefinitions.AmazonStepDefinitions.kullanici_amazon_sayfasinda(AmazonStepDefinitions.java:21)
-	at ✽.kullanici Amazon sayfasinda(file:///C:/Users/Hakan%20Batirhan.DESKTOP-KA8SOKR/IdeaProjects/Youtube_Automation_Lessons/src/test/resources/features/clickHighlight.feature:4)
-]]>
-</failure>
+<testsuite name="Cucumber" time="84.574" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Data Table Test" name="Cicek Sepeti urun arama" time="83.782">
 <system-out><![CDATA[
-Given kullanici Amazon sayfasinda...........................................failed
-Then kullanici Nutella icin arama yapar.....................................skipped
-And sonuclarin Nutella icerdigini test eder.................................skipped
-And sayfayi kapatir.........................................................skipped
+Given "cicek sepeti" sitesine gidilir.......................................passed
+When hediye linki tiklanir..................................................passed
+And dogum gunu linki tiklanir...............................................passed
+Then dogum gunu sayfasinda oldugu dogrulanir................................passed
+When renk drop down tiklanir................................................passed
+Then sirasiyla renkler secilir..............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
