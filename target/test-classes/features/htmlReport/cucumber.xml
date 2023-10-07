@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="84.509" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Data Table Test" name="Cicek Sepeti urun arama" time="84.018">
+<testsuite name="Cucumber" time="8.664" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Normalize Space" name="Test 01 Normalize Space" time="7.41">
 <system-out><![CDATA[
-Given "cicek sepeti" sitesine gidilir.......................................passed
-When hediye linki tiklanir..................................................passed
-And dogum gunu linki tiklanir...............................................passed
-Then dogum gunu sayfasinda oldugu dogrulanir................................passed
-When renk drop down tiklanir................................................passed
-Then sirasiyla renkler secilir..............................................passed
+Given kullanici Amazon sayfasinda...........................................passed
+When kullanici Başa dön yazisina kadar iner.................................passed
+Then Başa dön yazisina geldigini dogrular...................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
