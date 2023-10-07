@@ -1,5 +1,6 @@
 package utilities;
 
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import p1.N11_LoginIn;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -34,7 +35,7 @@ public class ReusableMethods {
     //Bu class'a extends ettiğimiz test classlarından ulaşabiliriz
 
     protected static ExtentReports extentReports; //Raporlamayı başlatır
-    protected static ExtentHtmlReporter extentHtmlReporter;//Raporu HTML formatında düzenler
+    protected static ExtentSparkReporter extentHtmlReporter;//Raporu HTML formatında düzenler
     public static ExtentTest extentTest;//Tüm test aşamalarında extentTest objesi ile bilgi ekleriz
 
     /**
@@ -45,17 +46,17 @@ public class ReusableMethods {
         extentReports = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+        extentHtmlReporter = new ExtentSparkReporter(dosyaYolu); // ExtentSparkReporter kullanın
         extentReports.attachReporter(extentHtmlReporter);
 
-extentHtmlReporter.config().setAutoCreateRelativePathMedia(true);//resim eklemek icin
+        //extentHtmlReporter.config().setAutoCreateRelativePathMedia(true); // Resim eklemek için
 
         extentReports.setSystemInfo("Browser", "Chrome");
         extentReports.setSystemInfo("Tester", "Hakan");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
         extentTest = extentReports.createTest("ExtentTest", "Test Raporu");
-
+    }
     }
     /**
      bu metot ile extent rapora bilgi girisi saglanir
