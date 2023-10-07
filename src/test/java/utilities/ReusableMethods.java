@@ -57,7 +57,7 @@ public class ReusableMethods {
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
         extentTest = extentReports.createTest("ExtentTest", "Test Raporu");
     }
-    }
+
     /**
      bu metot ile extent rapora bilgi girisi saglanir
      @param message
