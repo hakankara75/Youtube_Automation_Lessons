@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="73.199" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Data Table Test" name="Cicek Sepeti urun arama" time="72.918">
+<testsuite name="Cucumber" time="41.385" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Teknosa sayfasi testi" name="Teknosa sayfasi" time="40.655">
 <system-out><![CDATA[
-Given "cicek sepeti" sitesine gidilir.......................................passed
-When hediye linki tiklanir..................................................passed
-And dogum gunu linki tiklanir...............................................passed
-Then dogum gunu sayfasinda oldugu dogrulanir................................passed
-When renk drop down tiklanir................................................passed
-Then sirasiyla renkler secilir..............................................passed
+Given teknosa sayfasına gider...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -16,8 +16,17 @@ public class ShadowRoot_StepDef {
     public void teknosa_sayfasına_gider() {
         Driver.getDriver().get(ConfigReader.getProperty("teknosa"));
         teknosaPage.kampanya.click();
+
+
+        /*asagidaki kod ile shadow root yapisina sahip tag'in locatini searchContext objesine atiyoruz. Boylece elementin
+        Shadow Dom try yapisina ulasiliyor
+                    */
         SearchContext searchContext = Driver.getDriver().findElement(By.xpath("//efilli-layout-dynamic")).getShadowRoot();
 
+        /*
+        asagidaki kod click islemi yapilmak istenen elementi bulmak icin searchContext icindeki Shadow Dom
+        icine bir element locate verilerek aranir ve bir webelemente atanir.
+         */
         WebElement shadowElement = searchContext.findElement(By.cssSelector("div[data-name='Accept Button']"));
 
         shadowElement.click();
