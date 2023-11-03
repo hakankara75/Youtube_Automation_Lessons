@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="41.385" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Teknosa sayfasi testi" name="Teknosa sayfasi" time="40.655">
+<testsuite name="Cucumber" time="15.524" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Teknosa sayfasi testi" name="Teknosa sayfasi" time="15.121">
 <system-out><![CDATA[
 Given teknosa sayfasına gider...............................................passed
 ]]></system-out>

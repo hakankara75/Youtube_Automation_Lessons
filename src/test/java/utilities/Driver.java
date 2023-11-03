@@ -38,7 +38,7 @@ public class Driver {
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless"); // Başsız modu etkinleştir
                     options.addArguments("--disable-gpu"); // GPU kullanımını devre dışı bırak
-
+                    // driver = new ChromeDriver(options); bu satir yorumdan kalkarsa, alt satir yoruma alinirsa headless calisir.
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "edge":
