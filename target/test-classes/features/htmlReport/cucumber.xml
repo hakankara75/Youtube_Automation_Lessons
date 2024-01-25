@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.098" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="color assertion" name="color assertion" time="4.847">
-<failure type="java.lang.IllegalArgumentException" message="No enum constant org.openqa.selenium.support.Colors.RGB(220, 46, 46) NONE REPEAT SCROLL 0% 0% / AUTO PADDING-BOX BORDER-BOX">
-<![CDATA[java.lang.IllegalArgumentException: No enum constant org.openqa.selenium.support.Colors.RGB(220, 46, 46) NONE REPEAT SCROLL 0% 0% / AUTO PADDING-BOX BORDER-BOX
-	at java.base/java.lang.Enum.valueOf(Enum.java:240)
-	at org.openqa.selenium.support.Colors.valueOf(Colors.java:23)
-	at org.openqa.selenium.support.Color$NamedColorConverter.getColor(Color.java:305)
-	at org.openqa.selenium.support.Color.fromString(Color.java:46)
-	at stepDefinitions.ColorAssertion_StepDef.cokSatanlarLinkiYanindakiYeniIkonununRenginiDogrular(ColorAssertion_StepDef.java:30)
-	at ✽.cok satanlar linki yanindaki yeni ikonunun rengini dogrular(file:///C:/Users/Hakan/IdeaProjects/Youtube_Automation_Lessons/src/test/resources/features/colorAssertion.feature:5)
-]]>
-</failure>
+<testsuite name="Cucumber" time="18.745" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="color assertion" name="color assertion" time="18.209">
 <system-out><![CDATA[
-Given kullanici Trendyol sayfasina gider....................................passed
-Then cok satanlar linki yanindaki yeni ikonunun rengini dogrular............failed
+Given kullanici Trendyol sitesine gider.....................................passed
+Then kullanici cok satanlar linki yanindaki yeni butonunun rengini dogrular.passed
 ]]></system-out>
 </testcase>
 </testsuite>

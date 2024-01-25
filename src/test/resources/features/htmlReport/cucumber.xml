@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.699" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="color assertion" name="color assertion" time="4.475">
+<testsuite name="Cucumber" time="7.392" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="color assertion" name="color assertion" time="6.823">
 <system-out><![CDATA[
-Given kullanici Trendyol sayfasina gider....................................passed
-Then cok satanlar linki yanindaki yeni ikonunun rengini dogrular............passed
+Given kullanici Trendyol sitesine gider.....................................passed
+Then kullanici cok satanlar linki yanindaki yeni butonunun rengini dogrular.passed
 ]]></system-out>
 </testcase>
 </testsuite>

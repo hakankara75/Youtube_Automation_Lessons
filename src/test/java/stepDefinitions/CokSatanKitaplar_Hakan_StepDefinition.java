@@ -34,5 +34,7 @@ public class CokSatanKitaplar_Hakan_StepDefinition {
         ReusableMethods.webelementJavaScript("document.querySelector(\"#mainNav > div.nav-content > ul > li.book.has-menu.active > div.lvl2.js-bookCr > ul > li:nth-child(1) > div > div.open-menu-ct.bookBestSeller > div.subCategories > ul:nth-child(2) > li:nth-child(1) > a > strong\")").click();
 
     }
+
+
 }
 
