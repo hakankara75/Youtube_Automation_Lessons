@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -31,5 +32,6 @@ public class ShadowRoot_StepDef {
 
         shadowElement.click();
     }
+
 
 }
