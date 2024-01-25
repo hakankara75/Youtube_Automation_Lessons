@@ -33,16 +33,19 @@ public class Enuygun {
     public void kullanici_gidis_ve_donus_tarihlerini_secer() {
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].value = arguments[1]", page.departureDate, ConfigReader.getProperty("gidisDate"));
-        ReusableMethods.bekle(2);
-        page.ucuzBiletBul.click();
-
-
-//        page.departureDate.click();
-//        js.executeScript("arguments[0].value = arguments[1]", page.departureDate2.get(0), ConfigReader.getProperty("gidisDate"));
+//        js.executeScript("arguments[0].value = arguments[1]", page.departureDate, ConfigReader.getProperty("gidisDate"));
 //        ReusableMethods.bekle(2);
-//        page.departureDate2.get(0).click();
 //        page.ucuzBiletBul.click();
+
+
+        page.departureDate.click();
+        System.out.println("page.departureDate2.get(0) = " + page.departureDate2.get(0).getAttribute("aria-label"));
+        js.executeScript("arguments[0].setAttribute('aria-label', arguments[1])", page.departureDate2.get(0), "Cuma, 19 Oca 2024");
+        ReusableMethods.bekle(3);
+        page.departureDate2.get(0).click();
+        ReusableMethods.bekle(3);
+        page.ucuzBiletBul.click();
+        ReusableMethods.bekle(3);
 
     }
 

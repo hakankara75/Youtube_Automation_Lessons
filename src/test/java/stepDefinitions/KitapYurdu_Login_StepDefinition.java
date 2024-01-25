@@ -17,7 +17,6 @@ public class KitapYurdu_Login_StepDefinition {
         locate.girisYap.click();
     }
 
-
     @And("eposta kutusuna mailini girer")
     public void epostaKutusunaMailiniGirer() {
         locate.eposta.sendKeys(ConfigReader.getProperty("epostaHakan"));
@@ -33,6 +32,7 @@ public class KitapYurdu_Login_StepDefinition {
     public void girisYapButonunuTiklar() {
         locate.girisYapButonu.click();
     }
+
     @Given("Kullanici {string} e gider")
     public void kullaniciEGider(String url) {
         Driver.getDriver().get(ConfigReader.getProperty("kitapYurduUrl"));

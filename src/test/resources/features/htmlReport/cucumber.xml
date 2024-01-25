@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.253" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Uçak Bileti arama bölümü" name="Ucak bileti search form alani doldurulur" time="8.01">
+<testsuite name="Cucumber" time="17.237" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Uçak Bileti arama bölümü" name="Ucak bileti search form alani doldurulur" time="16.997">
 <system-out><![CDATA[
 Given Kullanici anasayfaya gider............................................passed
 And Kullanici gidis ve donus tarihlerini secer..............................passed
