@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.testng.Assert.assertTrue;
+import static utilities.Driver.getDriver;
 
 public class ReusableMethods {
     //TestBase class'ından Obje oluşturmanın önüne geçilmesi için abstract yapılabilir
@@ -663,5 +664,17 @@ return element;
 //        String script = "arguments[0].style.border='3px solid green';";
         ((JavascriptExecutor) Driver.getDriver()).executeScript(script, element);
 
+    }
+
+    /**
+     * bu metot ile BootStrap ile gomulu halde yapilmis olan mesajlar text olarak alinir
+     * @param element yerine messaji alinmak istenen elementin locate verilmeli
+     */
+    public static String assertMessage(WebElement element){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        if (!(Boolean)javascriptExecutor.executeScript("return arguments[0].validity.valid;", element)){
+            return (String) javascriptExecutor.executeScript("return arguments[0].validationMessage;", element);
+        }
+        return "Field is valid"; //gecerli ise bu mesaj yazilacak
     }
 }

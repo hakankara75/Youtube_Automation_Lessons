@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.392" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="color assertion" name="color assertion" time="6.823">
+<testsuite name="Cucumber" time="9.413" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="message" name="message" time="8.824">
 <system-out><![CDATA[
-Given kullanici Trendyol sitesine gider.....................................passed
-Then kullanici cok satanlar linki yanindaki yeni butonunun rengini dogrular.passed
+Given "tapAz" sitesine giris yapilir........................................passed
+And email kutusuna yanlis data girilir......................................passed
+And devam et butonuna basilir...............................................passed
+Then giris yapilamadigi dogrulanir..........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

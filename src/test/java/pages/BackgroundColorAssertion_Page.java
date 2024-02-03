@@ -12,4 +12,8 @@ public class BackgroundColorAssertion_Page {
     }
     @FindBy(xpath = "(//span[@class='new-badge'])[1]")
     public WebElement yeni;
+    @FindBy(id = "lot_contact_attributes_email")
+    public WebElement email;
+    @FindBy(xpath = "//button[contains(@data-stat, new-lot-submit)]")
+    public WebElement devamEt;
 }
