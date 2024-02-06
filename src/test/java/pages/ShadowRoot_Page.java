@@ -16,5 +16,9 @@ public class ShadowRoot_Page {
     public WebElement shadowRoot;
     @FindBy(css = "px-16px py-8px cursor-pointer rounded-4px bg-[#f58220] text-white grow text-center font-600 col-span-full md:col-span-1 lt-md:row-start-3")
     public WebElement cerez;
+    @FindBy(xpath = "//a[contains(@href,'/basic')]")
+    public WebElement basicAuth;
+    @FindBy(css = "div.example p")
+    public WebElement herokuMessage;
 
 }

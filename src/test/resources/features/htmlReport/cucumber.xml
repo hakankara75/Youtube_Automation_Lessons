@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="9.413" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="message" name="message" time="8.824">
+<testsuite name="Cucumber" time="12.899" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="popup" name="popup" time="12.343">
 <system-out><![CDATA[
-Given "tapAz" sitesine giris yapilir........................................passed
-And email kutusuna yanlis data girilir......................................passed
-And devam et butonuna basilir...............................................passed
-Then giris yapilamadigi dogrulanir..........................................passed
+Given kullanici heroku sayfasina gider......................................passed
+And basic auth linkini tiklar...............................................passed
+Then sayfaya giris yaptigini dogrular.......................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
