@@ -1,3 +1,5 @@
+package runner;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -11,8 +13,8 @@ import org.junit.runner.RunWith;
                // "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         features = "src/test/resources/features",
-        glue = "stepDefinitions",
-        tags = "@popup",
+        glue = {"stepDefinitions","hooks"},
+        tags = "@notification",
         dryRun = false
 
 )

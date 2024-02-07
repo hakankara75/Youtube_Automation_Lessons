@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.Color;
 import pages.BackgroundColorAssertion_Page;
 import utilities.ConfigReader;
+import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertEquals;
 import static utilities.Driver.getDriver;
@@ -15,6 +16,7 @@ public class BackgroundColorAssertion_StepDef {
     @Given("kullanici Trendyol sitesine gider")
     public void kullaniciTrendyolSitesineGider() {
         getDriver().get(ConfigReader.getProperty("trendyol"));
+        ReusableMethods.bekle(3);
     }
 
     @Then("kullanici cok satanlar linki yanindaki yeni butonunun rengini dogrular")

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="12.899" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="popup" name="popup" time="12.343">
+<testsuite name="Cucumber" time="12.179" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="notification" name="notification" time="11.478">
 <system-out><![CDATA[
-Given kullanici heroku sayfasina gider......................................passed
-And basic auth linkini tiklar...............................................passed
-Then sayfaya giris yaptigini dogrular.......................................passed
+Given kullanici Trendyol sitesine gider.....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

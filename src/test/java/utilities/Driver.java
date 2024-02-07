@@ -33,6 +33,15 @@ public class Driver {
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
+                    /* notification popup kapatmak icin asagidaki kod kullanilir
+                    Map<String, Object> prefs= new HashMap<String, Object>();
+
+                    //onay vermek icin 1, reddetmek icin 2
+                    prefs.put("profile.default_content_setting_values.notifications", 2);
+                    ChromeOptions options=new ChromeOptions();
+                    options.setExperimentalOption("prefs", prefs);
+                    driver=new ChromeDriver(options);
+                     */
 
                     //asagideki 3 satirdaki kodlar testleri Headless (Jenkins gibi) kosmak istedigimiz yerlerde aktive edilebilir
                     ChromeOptions options = new ChromeOptions();
