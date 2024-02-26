@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.011" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="notification" name="notification" time="12.407">
+<testsuite name="Cucumber" time="12.179" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="notification" name="notification" time="11.478">
 <system-out><![CDATA[
 Given kullanici Trendyol sitesine gider.....................................passed
 ]]></system-out>

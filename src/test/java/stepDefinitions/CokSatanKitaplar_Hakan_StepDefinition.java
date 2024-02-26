@@ -18,7 +18,7 @@ public class CokSatanKitaplar_Hakan_StepDefinition {
     @Given("kullanici cok satan kitaplar menusu ustune gelir")
     public void kullaniciCokSatanKitaplarMenusuUstuneGelir() {
         WebElement element = ReusableMethods.webelementJavaScript("document.querySelector(\"#mainNav > div.nav-content > ul > li.book.has-menu.active > div.lvl2.js-bookCr > ul > li:nth-child(1)\")");
-        ReusableMethods.moveToElementWithAction(element);
+        ReusableMethods.moveToElement(element);
     }
     @When("{int} saniye bekleme yapar")
     public void saniye_bekleme_yapar(Integer int1) {

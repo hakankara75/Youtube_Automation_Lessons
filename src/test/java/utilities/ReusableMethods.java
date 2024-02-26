@@ -233,14 +233,7 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
-    /**
-     bu metot ile mause element ustunde bekletilir
-     @param webElement girilmesi gereken locate dir
-     */
-    public static void moveToElement(WebElement webElement) {
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(webElement).perform();
-    }
+
 
     /**
      bu metot ile herhangi bir webelemente JavascriptExecutor kullanarak tiklayabilirim
@@ -565,7 +558,7 @@ return element;
      * Bu metot Action class kullanarak bir webelementin ustune gidip bekler
      * @param element yerine webelement'in locate koyulmalidir
      */
-    public static void moveToElementWithAction(WebElement element){
+    public static void moveToElement(WebElement element){
         Actions action = new Actions(Driver.getDriver());
         action.moveToElement(element).perform();
         try {
