@@ -471,15 +471,6 @@ public class ReusableMethods {
     }
 
 
-    /**bu metot search boxa sendkeys gonderir
-        * @param webElement girilmesi gereken element dir
-     * @param str sendkey ile gonderilmek istenen metindir
-     */
-    public static void typeWithJavaScript(WebElement webElement, String str) {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].setAttribute('value', '" + str + "')", webElement);
-    }
-
     /** Bu metot ile select objesinin indexi ile secim yapilir
      *
      * @param webElement elementin locatidir
@@ -670,4 +661,30 @@ return element;
         }
         return "Field is valid"; //gecerli ise bu mesaj yazilacak
     }
+
+    /**
+     * bbu metot ile bir elementin gorunurlugu saglanir
+     * @param element gorunur olmasi istenen elementin locate verilir
+     */
+    public static void setElementVisible(WebElement element) {
+ JavascriptExecutor jsExecutor = (JavascriptExecutor) getDriver();
+jsExecutor.executeScript("arguments[0].style.opacity='1';", element);}
+
+    /**
+     * Bu metot ile elementin className değeri string olarak verilerek o classtaki text alinir.
+     *
+     * @param  xpath text degeri alinmak istenen elementin xpathi string olarak verilir
+     * @return
+     */
+    public static String getTextWithJavaScriptXpath(String xpath) {
+        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
+
+        // JavaScriptExecutor kullanarak elementin içeriğini al
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        String text = (String) jsExecutor.executeScript("return arguments[0].textContent;", element);
+        return text;
+    }
+
+
+
 }
