@@ -16,7 +16,6 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions","hooks"},
         tags = "@enuygun",
         dryRun = false
-
 )
 public class TestRunner {
 }
