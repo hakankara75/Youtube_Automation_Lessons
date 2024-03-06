@@ -52,7 +52,7 @@ asagida hata alinirsa screenshot yapilacagina dair metot var
             scenario.attach(failedScreenShot,"image/png", "failed_scenario"+scenario.getName());
 
         }
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
     }
 

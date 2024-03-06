@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="17.786" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="hiddenDropdown" name="hiddenDropdown_1" time="10.323">
+<testsuite name="Cucumber" time="21.483" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="createAssertMethod" name="createAssertMethod" time="20.828">
 <system-out><![CDATA[
-Given gratis sitesine gidilir...............................................passed
-When searchboxa "Kantaron" girilir..........................................passed
-Then Listenin ilk sirasinda "Dp Şampuan Kantaron" gorundugu dogrulanir......passed
-]]></system-out>
-</testcase>
-<testcase classname="hiddenDropdown" name="hiddenDropdown_2" time="6.868">
-<system-out><![CDATA[
-Given demoqa sitesine gidilir...............................................passed
-When State and City den "NCR" secilir.......................................passed
-Then "NCR" secildigi dogrulanir.............................................passed
+Given magento sitesine gidilir..............................................passed
+And women menusu ustune gelinir.............................................passed
+And tops menusu ustune gelinir..............................................passed
+And jackets secilir.........................................................passed
+And ilk urunde S beden secilir..............................................passed
+And ilk urunde mavi renk secilir............................................passed
+And add to cart butonuna basilir............................................passed
+And sepet tiklanir..........................................................passed
+When see details tiklanir...................................................passed
+Then alinan urun dogrulanir.................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

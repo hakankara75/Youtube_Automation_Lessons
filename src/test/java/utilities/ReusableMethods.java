@@ -38,7 +38,16 @@ public class ReusableMethods {
     protected static ExtentReports extentReports; //Raporlamayı başlatır
     protected static ExtentSparkReporter extentHtmlReporter;//Raporu HTML formatında düzenler
     public static ExtentTest extentTest;//Tüm test aşamalarında extentTest objesi ile bilgi ekleriz
+    /**
+     * bu metot ile JS yolu string olarak verilen elementi JavascriptExecutor kullanarak tiklayabilirim
+     * @param javascriptYolu click yapilacak webelement yolu string olarak verilir
+     */
+    public static void clickJSElementWithJavaScript(String javascriptYolu) {
+        JavascriptExecutor jse = (JavascriptExecutor) getDriver();
+        WebElement webElement = (WebElement) jse.executeScript("return " + javascriptYolu + "");
+        jse.executeScript("arguments[0].click();", webElement);
 
+    }
     /**
      bu metot ile extent rapor olusturulur
      */
