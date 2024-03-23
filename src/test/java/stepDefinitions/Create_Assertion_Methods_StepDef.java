@@ -4,16 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Create_Assertion_Methods_Page;
 import utilities.ReusableMethods;
-
-import java.time.Duration;
-
-import static org.junit.Assert.*;
 import static utilities.Driver.getDriver;
+
 
 public class Create_Assertion_Methods_StepDef {
     Create_Assertion_Methods_Page page=new Create_Assertion_Methods_Page();
